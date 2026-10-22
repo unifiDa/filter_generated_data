@@ -18,8 +18,13 @@ transformers = ">=4.45"
 huggingface_hub = "*"
 safetensors = "*"
 tqdm = "*"
+pandas = "*"
+matplotlib = "*"
+jupyterlab = "*"
+ipywidgets = "*"
 
 [tasks]
 # esempi: pixi run detect foto.jpg  |  pixi run crops cartella_crop/
 detect = "python src/age_detect.py"
 crops = "python src/age_detect.py --crops"
+lab = "jupyter lab notebooks/review_faces.ipynb"
