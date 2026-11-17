@@ -16,9 +16,11 @@ pixi run detect foto.jpg                 # rileva volti + età
 pixi run detect cartella_foto/
 pixi run crops cartella_crop/            # crop già pronti: salta il detector
 pixi run detect foto.jpg --model <repo_hf>   # altro modello di età
+pixi run filter --meta ../Dataset/results/results.csv --ages ./output/results.csv --by-frame  # filtra colore e eta'
 ```
 Output: `output/results.csv` + immagini annotate in `output/`.
 Primo avvio: scarica YuNet in `models/` e il modello HF (serve rete).
 
 Note: l'output è una **fascia d'età** con probabilità; per un'età numerica
 usare un modello di regressione (es. MiVOLO) passando `--model` se compatibile.
+
